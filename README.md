@@ -23,6 +23,8 @@
   <img src="https://img.shields.io/badge/install-USB%20drive-555" alt="Install by USB">
 </p>
 
+<div align="center">
+
 <table>
   <tr>
     <td align="center" width="50%">
@@ -43,6 +45,8 @@
     </td>
   </tr>
 </table>
+
+</div>
 
 <p align="center"><sub>Always the latest version, for your model.</sub></p>
 
