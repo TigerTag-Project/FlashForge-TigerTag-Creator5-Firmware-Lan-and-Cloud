@@ -70,10 +70,26 @@ the TigerTag ecosystem on their stock firmware.
 Every version is published as a **[GitHub Release](../../releases)** — the latest one is always at
 **[releases/latest](../../releases/latest)**. Each release carries both files.
 
-## Install
+## Install — from a USB drive
 
-Install the file the same way as any FlashForge firmware update for your printer. If in doubt,
-follow FlashForge's own update guide for the Creator 5 series.
+1. **Format a USB drive** as **FAT32** (FAT / FAT16 also work; MBR partition table).
+2. **Copy the `.tgz` for your model to the root of the drive** — not in a folder. Keep it as it is:
+   don't rename it, don't unpack it (it is a sealed FlashForge package the printer opens itself).
+   Put only **one** firmware file on the drive.
+3. **Switch the printer off.**
+4. **Plug the drive** into the printer's USB port.
+5. **Switch the printer on.** It finds the file and installs it — let it finish, and don't cut the
+   power while it works.
+6. Remove the drive once the printer has restarted on the new version.
+
+This is FlashForge's standard USB update — the same one they show for the Adventurer 5M series in
+their official video, **[Upgrade firmware via USB](https://www.youtube.com/watch?v=qaaGUUdZaHQ)**
+(Flashforge Support). The Creator 5's own manual covers its online updates:
+**[Firmware Upgrade — Creator 5 series](https://wiki.flashforge.com/en/creator-series/creator-5-series/manual/firmware-upgrade)**.
+
+> **Heads-up:** the printer's online update (Tools → Firmware) offers FlashForge's standard
+> firmware. Accepting one replaces this build — reinstall the latest release from this page to get
+> Cloud + LAN back.
 
 ---
 
