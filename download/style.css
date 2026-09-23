@@ -255,3 +255,25 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .lang { height: 32px; padding-left: 7px; }
   .lang select { max-width: 120px; font-size: 13px; }
 }
+
+/* ── Model switch (Creator 5 ⇄ Creator 5 Pro) ───────────────────────────── */
+.model-switch {
+  display: flex; gap: 6px; width: fit-content; max-width: 100%; margin: 0 auto 20px;
+  padding: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.model-tab {
+  display: inline-flex; align-items: center; gap: 10px; min-width: 0;
+  padding: 8px 22px 8px 8px; border-radius: 12px; color: var(--muted);
+  font-weight: 700; font-size: 17px; white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+.model-tab:hover { background: var(--surface-2); color: var(--text); text-decoration: none; }
+.model-tab img { width: 52px; height: 52px; object-fit: contain; border-radius: 8px; background: var(--surface-2); }
+.model-tab.is-active { background: var(--primary); color: #fff; }
+.model-tab.is-active img { background: rgba(255, 255, 255, .92); }
+@media (max-width: 560px) {
+  .model-switch { width: 100%; }
+  .model-tab { flex: 1 1 0; justify-content: center; padding: 8px 10px 8px 6px; font-size: 14px; gap: 6px; }
+  .model-tab img { width: 32px; height: 32px; }
+}

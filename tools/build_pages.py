@@ -186,13 +186,18 @@ def model_page(slug, prefix, name, img, oslug, oname):
     desc = (f'Download the latest official FlashForge × TigerSystem firmware for the {name}: '
             'FlashForge Cloud and LAN at the same time.')
     attrs = f' data-model="{prefix}" data-name="{name}" data-other="{oname}"'
+    switch = ''.join(
+        f'<a class="model-tab{" is-active" if m[0] == slug else ""}" href="../{m[0]}/"'
+        f'{" aria-current=\"page\"" if m[0] == slug else ""}>'
+        f'<img src="{A}/{m[3]}" alt="">{m[2]}</a>'
+        for m in MODELS)
     body = f'''
 <main class="hero">
   <div class="wrap">
+    <nav class="model-switch" aria-label="Printer model">{switch}</nav>
     <div class="hero-card">
       <div class="hero-media"><img src="{A}/{img}" alt="FlashForge {name}"></div>
       <div>
-        <span class="label">{name}</span>
         <h1 data-i18n="hero.title">Cloud + LAN firmware</h1>
         <p class="lede" data-i18n="hero.lede">The official FlashForge × TigerSystem firmware for the {name}: keep FlashForge Cloud, and reach the
         printer on your network at the same time.</p>
@@ -204,7 +209,6 @@ def model_page(slug, prefix, name, img, oslug, oname):
         </div>
         <div class="actions">
           <a class="btn btn-primary" id="dl" href="{REPO}/releases/latest" aria-disabled="true">{IC['dl']}<span data-i18n="btn.download">Download for {name}</span></a>
-          <a class="btn btn-ghost" href="../{oslug}/" data-i18n="btn.other">Looking for the {oname}? →</a>
         </div>
         <div class="status" id="status" role="status" data-i18n="status.finding">Finding the latest version…</div>
         <details class="sha" id="shaBox" hidden>
