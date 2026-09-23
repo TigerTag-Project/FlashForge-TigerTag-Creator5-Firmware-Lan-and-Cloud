@@ -232,3 +232,23 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .ts .btn-outline { color: #fff; border-color: rgba(255, 255, 255, .28); font-size: 15px; padding: 12px 18px; }
 .ts .btn-outline:hover { background: rgba(255, 255, 255, .08); }
 @media (max-width: 860px) { .ts { grid-template-columns: 1fr; padding: 22px; } }
+
+/* ── Language picker ─────────────────────────────────────────────────────── */
+.topbar-right { display: flex; align-items: center; gap: 18px; }
+.lang {
+  display: inline-flex; align-items: center; gap: 6px; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 10px; padding: 0 4px 0 9px; height: 34px; background: var(--surface);
+}
+.lang svg { width: 16px; height: 16px; flex: none; }
+.lang select {
+  font: inherit; font-size: 13px; color: var(--text); background: transparent; border: 0; outline: none;
+  padding: 6px 4px; cursor: pointer;
+}
+.lang:focus-within { border-color: var(--primary); }
+.home-head { text-align: center; max-width: 720px; margin: 0 auto 28px; }
+@media (max-width: 560px) {
+  .brand span { display: none; }            /* the two marks say it; the name crowded the bar */
+  .brand img { height: 26px; }
+  .lang { height: 32px; padding-left: 7px; }
+  .lang select { max-width: 120px; font-size: 13px; }
+}
