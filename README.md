@@ -23,12 +23,24 @@
   <img src="https://img.shields.io/badge/install-USB%20drive-555" alt="Install by USB">
 </p>
 
-<p align="center">
-  <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205-1f6feb?style=for-the-badge" alt="Download for Creator 5" height="36"></a>
-  &nbsp;
-  <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205%20Pro-1f6feb?style=for-the-badge" alt="Download for Creator 5 Pro" height="36"></a>
-  <br><sub>Always the latest version, for your model — in one click.</sub>
-</p>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/creator-5.png" alt="FlashForge Creator 5" width="260"><br>
+      <strong>FlashForge Creator 5</strong><br>
+      <sub><code>Creator5-&lt;version&gt;.tgz</code></sub><br><br>
+      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205-1f6feb?style=for-the-badge" alt="Download for Creator 5"></a>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/creator-5-pro.png" alt="FlashForge Creator 5 Pro" width="260"><br>
+      <strong>FlashForge Creator 5 Pro</strong><br>
+      <sub><code>Creator5Pro-&lt;version&gt;.tgz</code></sub><br><br>
+      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205%20Pro-1f6feb?style=for-the-badge" alt="Download for Creator 5 Pro"></a>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>Always the latest version, for your model — in one click.</sub></p>
 
 <p align="center">
   <a href="../../releases/latest"><strong>All releases</strong></a>
@@ -146,22 +158,10 @@ stronger. **Read the full story:** [Why TigerSystem exists](https://github.com/T
 
 ## Supported printers
 
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="assets/creator-5.png" alt="FlashForge Creator 5" width="260"><br>
-      <strong>FlashForge Creator 5</strong><br>
-      <sub><code>Creator5-&lt;version&gt;.tgz</code></sub><br><br>
-      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205-1f6feb?style=for-the-badge" alt="Download for Creator 5"></a>
-    </td>
-    <td align="center" width="50%">
-      <img src="assets/creator-5-pro.png" alt="FlashForge Creator 5 Pro" width="260"><br>
-      <strong>FlashForge Creator 5 Pro</strong><br>
-      <sub><code>Creator5Pro-&lt;version&gt;.tgz</code></sub><br><br>
-      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205%20Pro-1f6feb?style=for-the-badge" alt="Download for Creator 5 Pro"></a>
-    </td>
-  </tr>
-</table>
+| Printer | File in each release |
+|---|---|
+| **FlashForge Creator 5** | `Creator5-<version>.tgz` |
+| **FlashForge Creator 5 Pro** | `Creator5Pro-<version>.tgz` |
 
 > [!IMPORTANT]
 > **Use the file that matches your printer.** The two files are not interchangeable.
@@ -173,7 +173,7 @@ ecosystem on their stock firmware.
 
 ## Install
 
-The **Download** buttons above always fetch the newest file for your model. Every version is a
+The **Download** buttons at the top of this page always fetch the newest file for your model. Every version is a
 **[GitHub Release](../../releases)**; the newest is always at
 **[releases/latest](../../releases/latest)**, with both files attached and their SHA-256 checksums.
 
