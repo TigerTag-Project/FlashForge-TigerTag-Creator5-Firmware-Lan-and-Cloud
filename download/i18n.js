@@ -482,8 +482,6 @@
     vars.other = root.getAttribute('data-other') || '';
     var nodes = document.querySelectorAll('[data-i18n]');
     for (var i = 0; i < nodes.length; i++) nodes[i].innerHTML = t(nodes[i].getAttribute('data-i18n'));
-    var sel = document.getElementById('lang');
-    if (sel) sel.value = lang;
     document.dispatchEvent(new CustomEvent('ffgfw:lang', { detail: lang }));
   }
 
@@ -493,16 +491,68 @@
     locale: function () { return lang === 'pt' ? 'pt-BR' : (lang === 'pt-pt' ? 'pt-PT' : lang); }
   };
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var sel = document.getElementById('lang');
-    if (sel) {
-      sel.innerHTML = Object.keys(LANGS).map(function (k) { return '<option value="' + k + '">' + LANGS[k] + '</option>'; }).join('');
-      sel.addEventListener('change', function () {
-        lang = sel.value;
-        try { localStorage.setItem(KEY, lang); } catch (e) {}
-        apply();
-      });
+  /* Language menu — a styled list, not the browser's native <select>.
+     Keyboard: Enter/Space/↓ open, ↑/↓ move, Enter picks, Esc/Tab close. */
+  var TICK = '<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>';
+  function setLang(next) {
+    lang = next;
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+    apply();
+  }
+  function paintMenu() {
+    var lbl = document.getElementById('langLabel');
+    if (lbl) lbl.textContent = LANGS[lang];
+    var items = document.querySelectorAll('#langList li');
+    for (var i = 0; i < items.length; i++) items[i].setAttribute('aria-selected', String(items[i].getAttribute('data-lang') === lang));
+  }
+  document.addEventListener('ffgfw:lang', paintMenu);
+
+  function wireMenu() {
+    var menu = document.getElementById('langMenu'), btn = document.getElementById('langBtn'), list = document.getElementById('langList');
+    if (!menu || !btn || !list) return;
+    list.innerHTML = Object.keys(LANGS).map(function (k) {
+      return '<li role="option" data-lang="' + k + '" aria-selected="false"><span>' + LANGS[k] + '</span><small>' + k + '</small>' + TICK + '</li>';
+    }).join('');
+    var items = [].slice.call(list.querySelectorAll('li'));
+    var focus = -1;
+    function mark(i) {
+      items.forEach(function (li, n) { li.classList.toggle('is-focus', n === i); });
+      focus = i;
+      if (items[i]) items[i].scrollIntoView({ block: 'nearest' });
     }
+    function open() {
+      menu.setAttribute('data-open', ''); btn.setAttribute('aria-expanded', 'true');
+      mark(Math.max(0, Object.keys(LANGS).indexOf(lang))); list.focus();
+    }
+    function close(back) {
+      menu.removeAttribute('data-open'); btn.setAttribute('aria-expanded', 'false'); mark(-1);
+      if (back) btn.focus();
+    }
+    btn.addEventListener('click', function () { menu.hasAttribute('data-open') ? close() : open(); });
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); open(); }
+    });
+    list.addEventListener('click', function (e) {
+      var li = e.target.closest('li'); if (!li) return;
+      setLang(li.getAttribute('data-lang')); close(true);
+    });
+    list.addEventListener('mousemove', function (e) {
+      var li = e.target.closest('li'); if (li) mark(items.indexOf(li));
+    });
+    list.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); mark(Math.min(items.length - 1, focus + 1)); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); mark(Math.max(0, focus - 1)); }
+      else if (e.key === 'Home') { e.preventDefault(); mark(0); }
+      else if (e.key === 'End') { e.preventDefault(); mark(items.length - 1); }
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (items[focus]) { setLang(items[focus].getAttribute('data-lang')); close(true); } }
+      else if (e.key === 'Escape') { e.preventDefault(); close(true); }
+      else if (e.key === 'Tab') { close(); }
+    });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) close(); });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    wireMenu();
     apply();
   });
 })();

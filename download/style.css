@@ -18,8 +18,29 @@
   --radius: 18px;
   color-scheme: light;
 }
+/* Dark theme: the system preference unless the visitor picked one
+   (<html data-theme="light|dark">, set by the toggle, remembered locally). */
+:root[data-theme="dark"] {
+    --bg: #0b0e14;
+    --surface: #131822;
+    --surface-2: #1a2030;
+    --border: #262e3f;
+    --text: #e8ecf4;
+    --muted: #97a1b5;
+    --primary: #2f81f7;
+    --primary-2: #1f6feb;
+    --primary-soft: rgba(47, 129, 247, .14);
+    --warn: #f0b252;
+    --warn-soft: rgba(240, 178, 82, .08);
+    --warn-border: rgba(240, 178, 82, .35);
+    --ok: #3fb950;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 16px 40px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+}
+:root[data-theme="dark"] .ff-mark--light { display: none; }
+:root[data-theme="dark"] .ff-mark--dark  { display: inline-block; }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0b0e14;
     --surface: #131822;
     --surface-2: #1a2030;
@@ -36,8 +57,8 @@
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 16px 40px rgba(0, 0, 0, .35);
     color-scheme: dark;
   }
-  .ff-mark--light { display: none; }
-  .ff-mark--dark  { display: inline-block; }
+  :root:not([data-theme="light"]) .ff-mark--light { display: none; }
+  :root:not([data-theme="light"]) .ff-mark--dark  { display: inline-block; }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -236,24 +257,53 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .ts .btn-outline:hover { background: rgba(255, 255, 255, .08); }
 @media (max-width: 860px) { .ts { grid-template-columns: 1fr; padding: 22px; } }
 
-/* ── Language picker ─────────────────────────────────────────────────────── */
-.topbar-right { display: flex; align-items: center; gap: 18px; }
-.lang {
-  display: inline-flex; align-items: center; gap: 6px; color: var(--muted);
-  border: 1px solid var(--border); border-radius: 10px; padding: 0 4px 0 9px; height: 34px; background: var(--surface);
+/* ── Header controls: language menu + theme toggle ───────────────────────── */
+.topbar-right { display: flex; align-items: center; gap: 10px; }
+.topbar-right nav { margin-right: 8px; }
+.ctl {
+  display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 12px;
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--text); cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  transition: background .15s, border-color .15s;
 }
-.lang svg { width: 16px; height: 16px; flex: none; }
-.lang select {
-  font: inherit; font-size: 13px; color: var(--text); background: transparent; border: 0; outline: none;
-  padding: 6px 4px; cursor: pointer;
+.ctl:hover { background: var(--surface-2); }
+.ctl:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.ctl svg { width: 16px; height: 16px; flex: none; color: var(--muted); }
+.ctl .chev { width: 14px; height: 14px; transition: transform .15s; }
+.lang { position: relative; }
+.lang[data-open] .chev { transform: rotate(180deg); }
+.lang-list {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 236px;
+  margin: 0; padding: 6px; list-style: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow);
+  opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity .14s, transform .14s;
 }
-.lang:focus-within { border-color: var(--primary); }
+.lang[data-open] .lang-list { opacity: 1; transform: none; pointer-events: auto; }
+.lang-list li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 9px; font-size: 14px; cursor: pointer; color: var(--text);
+  white-space: nowrap;
+}
+.lang-list li span { flex: 1; }
+.lang-list li:hover, .lang-list li.is-focus { background: var(--surface-2); }
+.lang-list li[aria-selected="true"] { color: var(--primary); font-weight: 700; }
+.lang-list li .tick { width: 16px; height: 16px; visibility: hidden; }
+.lang-list li[aria-selected="true"] .tick { visibility: visible; }
+.lang-list li small { color: var(--muted); font-weight: 500; font-size: 11px; text-transform: uppercase; min-width: 36px; text-align: right; }
+.theme-btn { width: 36px; padding: 0; justify-content: center; }
+.theme-btn .moon { display: none; }
+:root[data-theme="dark"] .theme-btn .sun { display: none; }
+:root[data-theme="dark"] .theme-btn .moon { display: inline; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-btn .sun { display: none; }
+  :root:not([data-theme="light"]) .theme-btn .moon { display: inline; }
+}
 .home-head { text-align: center; max-width: 720px; margin: 0 auto 28px; }
 @media (max-width: 560px) {
   .brand span { display: none; }            /* the two marks say it; the name crowded the bar */
   .brand img { height: 26px; }
-  .lang { height: 32px; padding-left: 7px; }
-  .lang select { max-width: 120px; font-size: 13px; }
+  .ctl { height: 34px; padding: 0 10px; }
+  .theme-btn { width: 34px; padding: 0; }
 }
 
 /* ── Model switch (Creator 5 ⇄ Creator 5 Pro) ───────────────────────────── */

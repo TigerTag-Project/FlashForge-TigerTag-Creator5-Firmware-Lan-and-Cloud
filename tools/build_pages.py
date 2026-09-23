@@ -32,6 +32,9 @@ IC = {
     'plug': '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0z"/><path d="M12 18v4"/></svg>',
     'on':   '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>',
     'ok':   '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>',
+    'chev': '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+    'sun':  '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+    'moon': '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
     'globe': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
 }
 
@@ -51,6 +54,22 @@ def head(title, desc, base, model_attrs):
 <meta property="og:image" content="{SITE}/assets/hero-tigersystem-ecosystem.png">
 <link rel="icon" href="{A}/tigersystem-icon-framed.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{base}download/style.css">
+<script>
+  /* Theme before first paint: the visitor's pick, else the system's. */
+  (function () {{
+    try {{ var t = localStorage.getItem('ffgfw.theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); }} catch (e) {{}}
+    document.addEventListener('DOMContentLoaded', function () {{
+      var b = document.getElementById('themeBtn'); if (!b) return;
+      b.addEventListener('click', function () {{
+        var root = document.documentElement;
+        var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var next = cur === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try {{ localStorage.setItem('ffgfw.theme', next); }} catch (e) {{}}
+      }});
+    }});
+  }})();
+</script>
 </head>
 <body>
 <header class="topbar">
@@ -69,7 +88,11 @@ def head(title, desc, base, model_attrs):
         <a href="{REPO}">GitHub</a>
         <a href="https://tigersystem.io">tigersystem.io</a>
       </nav>
-      <label class="lang">{IC['globe']}<select id="lang" aria-label="Language"><option value="en">English</option></select></label>
+      <div class="lang" id="langMenu">
+        <button class="ctl" id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">{IC['globe']}<span id="langLabel">English</span>{IC['chev']}</button>
+        <ul class="lang-list" id="langList" role="listbox" aria-label="Language" tabindex="-1"></ul>
+      </div>
+      <button class="ctl theme-btn" id="themeBtn" type="button" aria-label="Light / dark">{IC['sun']}{IC['moon']}</button>
     </div>
   </div>
 </header>
