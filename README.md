@@ -57,10 +57,11 @@ benefits from it.
 | FlashForge Cloud (app, remote access) | ✓ | ✓ |
 | LAN access (local tools on your network) | ✓ | ✓ |
 | **Both at the same time** | — | **✓** |
-| Tiger Studio Manager and TigerSpool with Cloud on | — | **✓** |
+| Tiger Studio Manager, Tiger NFC Connect and TigerSpool with Cloud on | — | **✓** |
 
 Out of the box, a Creator 5 makes you choose between **Cloud** and **LAN**. With this firmware you
-keep FlashForge Cloud, and local tools reach the printer on your network at the same time.
+keep FlashForge Cloud, and the TigerTag apps and devices reach the printer on your network at the
+same time — on the desktop, on your phone, and at the printer's side.
 
 ### RFID on a printer that has no reader
 
@@ -69,6 +70,9 @@ The Creator 5 and Creator 5 Pro ship without an RFID reader. Through the
 
 - **[Tiger Studio Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager)** — the
   desktop app — follows the printer live and knows what is loaded in each slot.
+- **[Tiger NFC Connect](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/products/tigertag-connect.md)**
+  — the iOS and Android app — reads a spool's chip with your phone and reaches the printer on the
+  same network.
 - **[TigerSpool](https://github.com/TigerTag-Project/TigerSpool-RFID)** — a small reader box beside
   the printer — reads a spool's chip and writes the filament into the slot you pick: material,
   brand, colour and temperatures.
