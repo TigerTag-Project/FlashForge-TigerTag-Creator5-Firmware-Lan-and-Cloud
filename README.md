@@ -26,16 +26,20 @@
 <table>
   <tr>
     <td align="center" width="50%">
+      <br>
+      <img src="assets/label-creator-5.svg" alt="Creator 5" height="40"><br><br>
       <img src="assets/creator-5.png" alt="FlashForge Creator 5" width="260"><br>
-      <strong>FlashForge Creator 5</strong><br>
       <sub><code>Creator5-&lt;version&gt;.tgz</code></sub><br><br>
-      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205-1f6feb?style=for-the-badge" alt="Download for Creator 5"></a>
+      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="assets/btn-download.svg" alt="Download the latest firmware for the Creator 5" width="240"></a>
+      <br><br>
     </td>
     <td align="center" width="50%">
+      <br>
+      <img src="assets/label-creator-5-pro.svg" alt="Creator 5 Pro" height="40"><br><br>
       <img src="assets/creator-5-pro.png" alt="FlashForge Creator 5 Pro" width="260"><br>
-      <strong>FlashForge Creator 5 Pro</strong><br>
       <sub><code>Creator5Pro-&lt;version&gt;.tgz</code></sub><br><br>
-      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205%20Pro-1f6feb?style=for-the-badge" alt="Download for Creator 5 Pro"></a>
+      <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="assets/btn-download.svg" alt="Download the latest firmware for the Creator 5 Pro" width="240"></a>
+      <br><br>
     </td>
   </tr>
 </table>
