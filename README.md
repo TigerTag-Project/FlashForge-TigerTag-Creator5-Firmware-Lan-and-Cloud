@@ -30,6 +30,8 @@
   &nbsp;·&nbsp;
   <a href="#what-it-changes">What it changes</a>
   &nbsp;·&nbsp;
+  <a href="#what-is-tigersystem">TigerSystem</a>
+  &nbsp;·&nbsp;
   <a href="#staying-up-to-date">Staying up to date</a>
 </p>
 
@@ -83,6 +85,55 @@ spools **makers tag themselves at home**, on filament that never shipped with a 
 > [!NOTE]
 > The firmware is designed to connect the printer to the TigerTag ecosystem, but it is **free for
 > anyone to use**, with or without TigerTag hardware.
+
+---
+
+## What is TigerSystem?
+
+<p align="center">
+  <img src="assets/hero-tigersystem-ecosystem.png" alt="The TigerSystem ecosystem: a TigerPOD reader, Tiger Studio Manager on a desktop and the Tiger NFC Connect app on a phone" width="760">
+</p>
+
+A filament spool is the most-handled object in 3D printing — and the least intelligent. Printer
+makers have started fixing that with RFID tags, **but each one only inside its own walls**: one
+brand's tag means nothing to another brand's printer, and the data belongs to the manufacturer, not
+to the person who bought the filament.
+
+**TigerSystem** is the open answer, built around one idea:
+
+> **The spool's identity belongs to its owner — not to a printer brand.**
+
+Every spool carries a **[TigerTag](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/products/tigertag.md)** NFC chip holding its full profile —
+brand, material, colour, diameter, print settings — in an **open, documented format** that any NFC
+device can read: a phone, a desktop reader, a printer. The ambition is to become to 3D-printing
+materials what the barcode became to the shelf.
+
+### Our fight
+
+It started in 2023, right after Formnext, when printer makers began locking spool tags into
+proprietary formats one after another. We refused to let the industry settle there. A format had to
+exist that is **open source, neutral, cross-platform and centred on the user** — not as a manifesto,
+but as a working alternative that does *more* than the closed ones, for every filament brand, at no
+extra cost to the maker buying the spool.
+
+That is why this firmware matters. When a printer maker like **FlashForge** opens its machine to an
+open ecosystem it does not own, every user wins — and the case for open spool identity gets
+stronger. **Read the full story:** [Why TigerSystem exists](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/vision/why-tigersystem.md) ·
+[An open ecosystem](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/philosophy/open-ecosystem.md).
+
+### The ecosystem — everything is open
+
+| | Project | What it is |
+|---|---|---|
+| 📚 | **[TigerSystem-Docs](https://github.com/TigerTag-Project/TigerSystem-Docs)** | The source of truth — concepts, products, compatibility, for humans and AI |
+| 🏷️ | **[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)** | The open TigerTag chip protocol — full spec and public registry |
+| 🖥️ | **[Tiger Studio Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager)** | Desktop app — inventory, racks, live printers across six brands |
+| 📱 | **[Tiger NFC Connect](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/products/tigertag-connect.md)** | iOS / Android app — tap to read, tap to write, browse the catalogue |
+| 🧵 | **[TigerSpool RFID](https://github.com/TigerTag-Project/TigerSpool-RFID)** | Reader box beside the printer — scan a spool, it lands in the right slot |
+| ⚖️ | **[TigerScale V3](https://github.com/TigerTag-Project/Tiger-Scale-V3)** | Connected filament scale — dual NFC readers, touchscreen, battery |
+| 📡 | **[TigerPOD](https://github.com/TigerTag-Project/TigerPOD)** | Open-source desktop NFC reader & writer for spools |
+| 🧩 | **[SDK JS](https://github.com/TigerTag-Project/TigerTag-SDK-JS)** · **[SDK Python](https://github.com/TigerTag-Project/TigerTag-SDK-Python)** | Read and write TigerTag chips from your own code |
+| 🔌 | **[Firebase Integration](https://github.com/TigerTag-Project/TigerTag_Firebase_Integration)** | Third-party integration — Home Assistant, ESP32, Python examples |
 
 ---
 
