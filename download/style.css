@@ -127,7 +127,10 @@ details.sha code { flex: 1; min-width: 0; overflow-wrap: anywhere; color: var(--
 .copy { font-size: 12px; padding: 6px 10px; border-radius: 8px; }
 
 /* ── Sections ────────────────────────────────────────────────────────────── */
-section { padding: 40px 0 0; }
+/* Every section is also a .wrap, whose `margin: 0 auto` + `padding: 0 20px`
+   outrank a bare `section` rule — the gap came out as 0 and cards sat flush.
+   `section.wrap` is more specific than `.wrap`, so this one holds. */
+section.wrap { margin-top: 48px; }
 section h2 { font-size: 24px; letter-spacing: -.01em; margin: 0 0 6px; }
 section .sub { color: var(--muted); margin: 0 0 20px; }
 
