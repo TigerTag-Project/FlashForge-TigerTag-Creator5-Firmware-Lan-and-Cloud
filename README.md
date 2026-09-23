@@ -6,7 +6,7 @@
   &nbsp;&nbsp;&nbsp;
   <img src="assets/x.svg" alt="×" height="30">
   &nbsp;&nbsp;&nbsp;
-  <img src="assets/tiger-head-square.svg" alt="TigerSystem" height="84">
+  <img src="assets/tigersystem-app-icon.svg" alt="TigerSystem" height="84">
 </p>
 
 <h1 align="center">FlashForge × TigerSystem</h1>
