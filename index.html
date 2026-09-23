@@ -1,24 +1,24 @@
 <!doctype html>
-<html lang="en" data-model="Creator5">
+<html lang="en" data-model="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlashForge Creator 5 — Cloud + LAN firmware</title>
-<meta name="description" content="Download the latest official FlashForge × TigerSystem firmware for the Creator 5: FlashForge Cloud and LAN at the same time.">
-<meta property="og:title" content="FlashForge Creator 5 — Cloud + LAN firmware">
-<meta property="og:description" content="Download the latest official FlashForge × TigerSystem firmware for the Creator 5: FlashForge Cloud and LAN at the same time.">
+<title>FlashForge × TigerSystem — Creator 5 / 5 Pro Cloud + LAN firmware</title>
+<meta name="description" content="Official FlashForge firmware for the Creator 5 and Creator 5 Pro: FlashForge Cloud and LAN at the same time. Built by FlashForge with TigerTag.">
+<meta property="og:title" content="FlashForge × TigerSystem — Creator 5 / 5 Pro Cloud + LAN firmware">
+<meta property="og:description" content="Official FlashForge firmware for the Creator 5 and Creator 5 Pro: FlashForge Cloud and LAN at the same time. Built by FlashForge with TigerTag.">
 <meta property="og:image" content="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/assets/hero-tigersystem-ecosystem.png">
-<link rel="icon" href="../../assets/tigersystem-icon-framed.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../../download/style.css">
+<link rel="icon" href="assets/tigersystem-icon-framed.svg" type="image/svg+xml">
+<link rel="stylesheet" href="download/style.css">
 </head>
 <body>
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="../../">
-      <img class="ff-mark--light" src="../../assets/flashforge-mark-light.svg" alt="FlashForge">
-      <img class="ff-mark--dark" src="../../assets/flashforge-mark-dark.svg" alt="FlashForge">
-      <img class="x" src="../../assets/x.svg" alt="×">
-      <img src="../../assets/tigersystem-icon-framed.svg" alt="TigerSystem">
+    <a class="brand" href="./">
+      <img class="ff-mark--light" src="assets/flashforge-mark-light.svg" alt="FlashForge">
+      <img class="ff-mark--dark" src="assets/flashforge-mark-dark.svg" alt="FlashForge">
+      <img class="x" src="assets/x.svg" alt="×">
+      <img src="assets/tigersystem-icon-framed.svg" alt="TigerSystem">
       <span>FlashForge × TigerSystem</span>
     </a>
     <nav>
@@ -32,30 +32,22 @@
 
 <main class="hero">
   <div class="wrap">
-    <div class="hero-card">
-      <div class="hero-media"><img src="../../assets/creator-5.png" alt="FlashForge Creator 5"></div>
-      <div>
+    <div style="text-align:center;max-width:720px;margin:0 auto 28px">
+      <h1>Cloud + LAN firmware for the Creator 5</h1>
+      <p class="lede">The official FlashForge × TigerSystem firmware — FlashForge Cloud and your local network, both on at once.
+      Latest version <b id="ver">…</b> <span id="date" style="opacity:.8"></span>.</p>
+    </div>
+    <div class="picker">
+      <a class="model" href="download/creator5/">
         <span class="label">Creator 5</span>
-        <h1>Cloud + LAN firmware</h1>
-        <p class="lede">The official FlashForge × TigerSystem firmware for the Creator 5: keep FlashForge Cloud, and reach the
-        printer on your network at the same time.</p>
-        <div class="meta">
-          <span class="chip">Version <b id="ver">latest</b></span>
-          <span class="chip" id="date"></span>
-          <span class="chip" id="size"></span>
-          <span class="chip chip--ok">✓ Official FlashForge build</span>
-        </div>
-        <div class="actions">
-          <a class="btn btn-primary" id="dl" href="https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/releases/latest" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></svg>Download for Creator 5</a>
-          <a class="btn btn-ghost" href="../creator5pro/">Looking for the Creator 5 Pro? →</a>
-        </div>
-        <div class="status" id="status" role="status">Finding the latest version…</div>
-        <details class="sha" id="shaBox" hidden>
-          <summary>Verify the file — SHA-256</summary>
-          <div class="sha-body"><code id="sha"></code><button class="btn btn-ghost copy" id="copy" type="button">Copy</button></div>
-          <div class="sha-body"><small>File: <code id="file"></code></small></div>
-        </details>
-      </div>
+        <div class="hero-media"><img src="assets/creator-5.png" alt="FlashForge Creator 5"></div>
+        <span class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></svg>Download</span>
+      </a>
+      <a class="model" href="download/creator5pro/">
+        <span class="label">Creator 5 Pro</span>
+        <div class="hero-media"><img src="assets/creator-5-pro.png" alt="FlashForge Creator 5 Pro"></div>
+        <span class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></svg>Download</span>
+      </a>
     </div>
   </div>
 </main>
@@ -102,9 +94,9 @@
 
 <section class="wrap" id="tigersystem">
   <div class="ts">
-    <img class="ts-hero" src="../../assets/hero-tigersystem-ecosystem.png" alt="The TigerSystem ecosystem: a TigerPOD reader, Tiger Studio Manager on a desktop and the Tiger NFC Connect app on a phone">
+    <img class="ts-hero" src="assets/hero-tigersystem-ecosystem.png" alt="The TigerSystem ecosystem: a TigerPOD reader, Tiger Studio Manager on a desktop and the Tiger NFC Connect app on a phone">
     <div class="ts-text">
-      <img class="ts-logo" src="../../assets/tigersystem-icon-framed.svg" alt="TigerSystem">
+      <img class="ts-logo" src="assets/tigersystem-icon-framed.svg" alt="TigerSystem">
       <h2>RFID for a printer that has no reader</h2>
       <blockquote>The spool's identity belongs to its owner — not to a printer brand.</blockquote>
       <p>TigerSystem is the open ecosystem for 3D-printing filament. A TigerTag NFC chip carries each spool's full
@@ -135,10 +127,10 @@
 <section class="wrap">
   <div class="thanks">
     <div class="logos">
-      <img class="ff-mark--light" src="../../assets/flashforge-mark-light.svg" alt="FlashForge">
-      <img class="ff-mark--dark" src="../../assets/flashforge-mark-dark.svg" alt="FlashForge">
-      <img class="x" src="../../assets/x.svg" alt="×">
-      <img src="../../assets/tigersystem-icon-framed.svg" alt="TigerSystem">
+      <img class="ff-mark--light" src="assets/flashforge-mark-light.svg" alt="FlashForge">
+      <img class="ff-mark--dark" src="assets/flashforge-mark-dark.svg" alt="FlashForge">
+      <img class="x" src="assets/x.svg" alt="×">
+      <img src="assets/tigersystem-icon-framed.svg" alt="TigerSystem">
     </div>
     <p><strong>Thank you, FlashForge.</strong> This is an official FlashForge firmware, developed by their engineering
     team at TigerTag's request and in close collaboration with us, and published here with their agreement. Opening a
@@ -153,6 +145,6 @@
     <span><a href="https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud">GitHub</a> · <a href="https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/releases">All releases</a> · <a href="https://tigersystem.io">tigersystem.io</a></span>
   </div>
 </footer>
-<script src="../../download/dl.js"></script>
+<script src="download/dl.js"></script>
 </body>
 </html>

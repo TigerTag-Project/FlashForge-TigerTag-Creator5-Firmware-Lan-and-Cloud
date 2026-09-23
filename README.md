@@ -44,7 +44,7 @@
   </tr>
 </table>
 
-<p align="center"><sub>Always the latest version, for your model — in one click.</sub></p>
+<p align="center"><sub>Always the latest version, for your model.</sub></p>
 
 <p align="center">
   <a href="../../releases/latest"><strong>All releases</strong></a>

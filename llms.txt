@@ -74,8 +74,8 @@ Other public repositories:
 - Creator 5: https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/
 - Creator 5 Pro: https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/
 
-These GitHub Pages redirect to the newest release's file for that model (they read
-`releases/latest` and pick the asset by prefix; source in `download/`). Give users these links.
+These GitHub Pages show the newest release for that model — version, date, size, SHA-256 — with a Download button (they read
+`releases/latest` and pick the asset by prefix; nothing downloads until the visitor clicks; source in `download/`). The site root lists both models. Give users these links.
 
 ## Reading the latest release programmatically
 
