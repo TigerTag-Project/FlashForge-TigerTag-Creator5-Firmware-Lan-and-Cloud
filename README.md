@@ -24,7 +24,14 @@
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><strong>Download</strong></a>
+  <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205-1f6feb?style=for-the-badge" alt="Download for Creator 5" height="36"></a>
+  &nbsp;
+  <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205%20Pro-1f6feb?style=for-the-badge" alt="Download for Creator 5 Pro" height="36"></a>
+  <br><sub>Always the latest version, for your model — in one click.</sub>
+</p>
+
+<p align="center">
+  <a href="../../releases/latest"><strong>All releases</strong></a>
   &nbsp;·&nbsp;
   <a href="#install">Install</a>
   &nbsp;·&nbsp;
@@ -139,10 +146,10 @@ stronger. **Read the full story:** [Why TigerSystem exists](https://github.com/T
 
 ## Supported printers
 
-| Printer | File to download |
-|---|---|
-| **FlashForge Creator 5** | `Creator5-<version>.tgz` |
-| **FlashForge Creator 5 Pro** | `Creator5Pro-<version>.tgz` |
+| Printer | File | Download the latest |
+|---|---|:---:|
+| **FlashForge Creator 5** | `Creator5-<version>.tgz` | <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205-1f6feb?style=for-the-badge" alt="Download for Creator 5"></a> |
+| **FlashForge Creator 5 Pro** | `Creator5Pro-<version>.tgz` | <a href="https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/"><img src="https://img.shields.io/badge/%E2%AC%87%20Download-Creator%205%20Pro-1f6feb?style=for-the-badge" alt="Download for Creator 5 Pro"></a> |
 
 > [!IMPORTANT]
 > **Use the file that matches your printer.** The two files are not interchangeable.
@@ -154,7 +161,8 @@ ecosystem on their stock firmware.
 
 ## Install
 
-Every version is a **[GitHub Release](../../releases)**; the newest is always at
+The **Download** buttons above always fetch the newest file for your model. Every version is a
+**[GitHub Release](../../releases)**; the newest is always at
 **[releases/latest](../../releases/latest)**, with both files attached and their SHA-256 checksums.
 
 1. **Format a USB drive** as **FAT32** (FAT / FAT16 also work; MBR partition table).
