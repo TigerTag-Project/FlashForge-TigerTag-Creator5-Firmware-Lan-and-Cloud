@@ -56,10 +56,10 @@ benefits from it.
 
 |  | Stock firmware | **FlashForge × TigerSystem** |
 |---|:---:|:---:|
-| FlashForge Cloud (app, remote access) | ✓ | ✓ |
-| LAN access (local tools on your network) | ✓ | ✓ |
-| **Both at the same time** | — | **✓** |
-| Tiger Studio Manager, Tiger NFC Connect and TigerSpool with Cloud on | — | **✓** |
+| FlashForge Cloud (app, remote access) | ✅ | ✅ |
+| LAN access (local tools on your network) | ✅ | ✅ |
+| **Both at the same time** | ❌ | ✅ |
+| Tiger Studio Manager, Tiger NFC Connect and TigerSpool with Cloud on | ❌ | ✅ |
 
 Out of the box, a Creator 5 makes you choose between **Cloud** and **LAN**. With this firmware you
 keep FlashForge Cloud, and the TigerTag apps and devices reach the printer on your network at the
