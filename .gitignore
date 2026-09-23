@@ -1,0 +1,3 @@
+# Firmware files live in GitHub Releases only — never in the repository.
+*.tgz
+.DS_Store
