@@ -87,9 +87,10 @@ their official video, **[Upgrade firmware via USB](https://www.youtube.com/watch
 (Flashforge Support). The Creator 5's own manual covers its online updates:
 **[Firmware Upgrade — Creator 5 series](https://wiki.flashforge.com/en/creator-series/creator-5-series/manual/firmware-upgrade)**.
 
-> **Heads-up:** the printer's online update (Tools → Firmware) offers FlashForge's standard
-> firmware. Accepting one replaces this build — reinstall the latest release from this page to get
-> Cloud + LAN back.
+> ⚠️ **Don't accept the printer's online update (OTA).** When the printer offers an update on its
+> screen (or under Tools → Firmware), it installs FlashForge's **standard** firmware — and you lose
+> Cloud + LAN. Tap **<** to skip it, and update from this page instead: Tiger Studio Manager tells
+> you when a new version is here. Already accepted one? Reinstall the latest release by USB.
 
 ---
 
