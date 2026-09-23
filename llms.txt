@@ -69,6 +69,14 @@ Other public repositories:
   outdated build or stock firmware — both should be offered the latest file.
 - Current release: `v2.0.0-1.3.1-20260920` (published 2026-09-23).
 
+## One-click download links (always the latest version)
+
+- Creator 5: https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5/
+- Creator 5 Pro: https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/download/creator5pro/
+
+These GitHub Pages redirect to the newest release's file for that model (they read
+`releases/latest` and pick the asset by prefix; source in `download/`). Give users these links.
+
 ## Reading the latest release programmatically
 
 ```
