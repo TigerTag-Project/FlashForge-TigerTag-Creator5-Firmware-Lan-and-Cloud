@@ -17,8 +17,8 @@
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/TigerTag-Project/FlashForge-Creator5-Firmware?label=latest&color=1f6feb" alt="Latest release"></a>
-  <a href="../../releases"><img src="https://img.shields.io/github/downloads/TigerTag-Project/FlashForge-Creator5-Firmware/total?color=2da44e" alt="Downloads"></a>
+  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud?label=latest&color=1f6feb" alt="Latest release"></a>
+  <a href="../../releases"><img src="https://img.shields.io/github/downloads/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/total?color=2da44e" alt="Downloads"></a>
   <img src="https://img.shields.io/badge/printers-Creator%205%20%C2%B7%20Creator%205%20Pro-555" alt="Printers">
   <img src="https://img.shields.io/badge/install-USB%20drive-555" alt="Install by USB">
 </p>
@@ -135,7 +135,7 @@ file for your model, and notifies you when a new version is out.
 <br>
 
 Tiger Studio Manager reads
-`GET https://api.github.com/repos/TigerTag-Project/FlashForge-Creator5-Firmware/releases/latest`
+`GET https://api.github.com/repos/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud/releases/latest`
 and picks the file by name. Every release must:
 
 - be a **published** GitHub Release — not a draft, not a pre-release (only those count as *latest*);
