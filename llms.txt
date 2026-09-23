@@ -29,6 +29,24 @@
 - Result: a printer with **no built-in RFID reader** can use the TigerTag chip of any filament brand
   that ships TigerTag, and chips makers program themselves for untagged filament.
 
+## TigerSystem in one paragraph
+
+TigerSystem is an open, user-centric ecosystem for 3D-printing filament, built on one idea: **the
+spool's identity belongs to its owner, not to a printer brand.** Each spool carries a TigerTag NFC
+chip in an open, documented format any NFC device can read, instead of one brand's locked RFID tag.
+It began in 2023, after Formnext, as a working alternative to proprietary spool tags. This firmware
+is an example of a printer maker (FlashForge) opening its machine to that open ecosystem.
+
+Source of truth: https://github.com/TigerTag-Project/TigerSystem-Docs (has its own llms.txt).
+Other public repositories:
+- Chip protocol + registry: https://github.com/TigerTag-Project/TigerTag-RFID-Guide
+- Desktop app: https://github.com/TigerTag-Project/TigerTag-Studio-Manager
+- Spool reader box: https://github.com/TigerTag-Project/TigerSpool-RFID
+- Connected scale: https://github.com/TigerTag-Project/Tiger-Scale-V3
+- Desktop NFC reader/writer: https://github.com/TigerTag-Project/TigerPOD
+- SDKs: https://github.com/TigerTag-Project/TigerTag-SDK-JS · https://github.com/TigerTag-Project/TigerTag-SDK-Python
+- Third-party integration: https://github.com/TigerTag-Project/TigerTag_Firebase_Integration
+
 ## Supported printers and files
 
 | Printer | FlashForge catalogue model id used by Tiger Studio | Release asset |
