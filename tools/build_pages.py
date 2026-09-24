@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO = 'https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud'
-DOCS = 'https://wiki.tigersystem.io'   # the docs render natively there — never link GitHub's raw view
+DOCS = 'https://wiki.tigersystem.io'   # these pages link the wiki (a real site); the README, read ON GitHub, keeps GitHub links
 ORG = 'https://github.com/TigerTag-Project'
 SITE = 'https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud'
 VIDEO = 'https://www.youtube.com/watch?v=qaaGUUdZaHQ'
@@ -165,11 +165,11 @@ def common(base):
   <h2 data-i18n="eco.title">The ecosystem — everything is open</h2>
   <p class="sub" data-i18n="eco.sub">Every piece is published, readable and free to build on.</p>
   <div class="eco">
-    <a href="{ORG}/TigerTag-Studio-Manager"><b>Tiger Studio Manager</b><span data-i18n="eco.studio">Desktop app — inventory, racks, live printers across six brands.</span></a>
+    <a href="{DOCS}/products/tiger-studio/"><b>Tiger Studio Manager</b><span data-i18n="eco.studio">Desktop app — inventory, racks, live printers across six brands.</span></a>
     <a href="{DOCS}/products/tigertag-connect/"><b>Tiger NFC Connect</b><span data-i18n="eco.nfc">iOS and Android — tap to read, tap to write.</span></a>
-    <a href="{ORG}/TigerSpool-RFID"><b>TigerSpool</b><span data-i18n="eco.spool">Reader box beside the printer — scan a spool, it lands in the right slot.</span></a>
-    <a href="{ORG}/TigerTag-RFID-Guide"><b data-i18n="eco.proto.b">TigerTag protocol</b><span data-i18n="eco.proto">The open chip format — full spec and public registry.</span></a>
-    <a href="{ORG}/Tiger-Scale-V3"><b>TigerScale V3</b><span data-i18n="eco.scale">Connected filament scale with dual NFC readers.</span></a>
+    <a href="{DOCS}/products/tigerspool/"><b>TigerSpool</b><span data-i18n="eco.spool">Reader box beside the printer — scan a spool, it lands in the right slot.</span></a>
+    <a href="{DOCS}/products/tigertag/"><b data-i18n="eco.proto.b">TigerTag protocol</b><span data-i18n="eco.proto">The open chip format — full spec and public registry.</span></a>
+    <a href="{DOCS}/products/tigerscale/"><b>TigerScale V3</b><span data-i18n="eco.scale">Connected filament scale with dual NFC readers.</span></a>
     <a href="{DOCS}/"><b>TigerSystem Wiki</b><span data-i18n="eco.docs">The source of truth — for humans and AI.</span></a>
   </div>
 </section>
@@ -191,7 +191,7 @@ def common(base):
 <footer>
   <div class="wrap">
     <span data-i18n="foot.copy">Firmware © <a href="https://www.flashforge.com">FlashForge</a>, redistributed with their permission.
-      Part of <a href="https://tigersystem.io">TigerSystem</a> by <a href="{ORG}">TigerTag</a>.</span>
+      Part of <a href="https://tigersystem.io">TigerSystem</a> by <a href="https://tigersystem.io">TigerTag</a>.</span>
     <span><a href="{REPO}">GitHub</a> · <a href="{REPO}/releases" data-i18n="foot.releases">All releases</a> · <a href="https://tigersystem.io">tigersystem.io</a></span>
   </div>
 </footer>
