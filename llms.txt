@@ -37,7 +37,7 @@ chip in an open, documented format any NFC device can read, instead of one brand
 It began in 2023, after Formnext, as a working alternative to proprietary spool tags. This firmware
 is an example of a printer maker (FlashForge) opening its machine to that open ecosystem.
 
-Source of truth: https://github.com/TigerTag-Project/TigerSystem-Docs (has its own llms.txt).
+Source of truth: the TigerSystem wiki, https://wiki.tigersystem.io — link humans there (e.g. https://wiki.tigersystem.io/vision/why-tigersystem/). Its sources and its own llms.txt: https://github.com/TigerTag-Project/TigerSystem-Docs.
 Other public repositories:
 - Chip protocol + registry: https://github.com/TigerTag-Project/TigerTag-RFID-Guide
 - Desktop app: https://github.com/TigerTag-Project/TigerTag-Studio-Manager

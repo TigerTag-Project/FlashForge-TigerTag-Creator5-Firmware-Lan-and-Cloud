@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO = 'https://github.com/TigerTag-Project/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud'
-DOCS = 'https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs'
+DOCS = 'https://wiki.tigersystem.io'   # the docs render natively there — never link GitHub's raw view
 ORG = 'https://github.com/TigerTag-Project'
 SITE = 'https://tigertag-project.github.io/FlashForge-TigerTag-Creator5-Firmware-Lan-and-Cloud'
 VIDEO = 'https://www.youtube.com/watch?v=qaaGUUdZaHQ'
@@ -155,7 +155,7 @@ def common(base):
       filament in the right slot.</p>
       <div class="actions">
         <a class="btn btn-light" href="https://tigersystem.io" data-i18n="ts.cta">Discover TigerSystem →</a>
-        <a class="btn btn-outline" href="{DOCS}/vision/why-tigersystem.md" data-i18n="ts.why">Why we built it</a>
+        <a class="btn btn-outline" href="{DOCS}/vision/why-tigersystem/" data-i18n="ts.why">Why we built it</a>
       </div>
     </div>
   </div>
@@ -166,11 +166,11 @@ def common(base):
   <p class="sub" data-i18n="eco.sub">Every piece is published, readable and free to build on.</p>
   <div class="eco">
     <a href="{ORG}/TigerTag-Studio-Manager"><b>Tiger Studio Manager</b><span data-i18n="eco.studio">Desktop app — inventory, racks, live printers across six brands.</span></a>
-    <a href="{DOCS}/products/tigertag-connect.md"><b>Tiger NFC Connect</b><span data-i18n="eco.nfc">iOS and Android — tap to read, tap to write.</span></a>
+    <a href="{DOCS}/products/tigertag-connect/"><b>Tiger NFC Connect</b><span data-i18n="eco.nfc">iOS and Android — tap to read, tap to write.</span></a>
     <a href="{ORG}/TigerSpool-RFID"><b>TigerSpool</b><span data-i18n="eco.spool">Reader box beside the printer — scan a spool, it lands in the right slot.</span></a>
     <a href="{ORG}/TigerTag-RFID-Guide"><b data-i18n="eco.proto.b">TigerTag protocol</b><span data-i18n="eco.proto">The open chip format — full spec and public registry.</span></a>
     <a href="{ORG}/Tiger-Scale-V3"><b>TigerScale V3</b><span data-i18n="eco.scale">Connected filament scale with dual NFC readers.</span></a>
-    <a href="{ORG}/TigerSystem-Docs"><b>TigerSystem Docs</b><span data-i18n="eco.docs">The source of truth — for humans and AI.</span></a>
+    <a href="{DOCS}/"><b>TigerSystem Wiki</b><span data-i18n="eco.docs">The source of truth — for humans and AI.</span></a>
   </div>
 </section>
 

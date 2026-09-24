@@ -99,7 +99,7 @@ The Creator 5 and Creator 5 Pro ship without an RFID reader. Through the
 
 - **[Tiger Studio Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager)** — the
   desktop app — follows the printer live and knows what is loaded in each slot.
-- **[Tiger NFC Connect](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/products/tigertag-connect.md)**
+- **[Tiger NFC Connect](https://wiki.tigersystem.io/products/tigertag-connect/)**
   — the iOS and Android app — reads a spool's chip with your phone and reaches the printer on the
   same network.
 - **[TigerSpool](https://github.com/TigerTag-Project/TigerSpool-RFID)** — a small reader box beside
@@ -130,7 +130,7 @@ to the person who bought the filament.
 
 > **The spool's identity belongs to its owner — not to a printer brand.**
 
-Every spool carries a **[TigerTag](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/products/tigertag.md)** NFC chip holding its full profile —
+Every spool carries a **[TigerTag](https://wiki.tigersystem.io/products/tigertag/)** NFC chip holding its full profile —
 brand, material, colour, diameter, print settings — in an **open, documented format** that any NFC
 device can read: a phone, a desktop reader, a printer. The ambition is to become to 3D-printing
 materials what the barcode became to the shelf.
@@ -145,17 +145,17 @@ extra cost to the maker buying the spool.
 
 That is why this firmware matters. When a printer maker like **FlashForge** opens its machine to an
 open ecosystem it does not own, every user wins — and the case for open spool identity gets
-stronger. **Read the full story:** [Why TigerSystem exists](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/vision/why-tigersystem.md) ·
-[An open ecosystem](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/philosophy/open-ecosystem.md).
+stronger. **Read the full story:** [Why TigerSystem exists](https://wiki.tigersystem.io/vision/why-tigersystem/) ·
+[An open ecosystem](https://wiki.tigersystem.io/philosophy/open-ecosystem/).
 
 ### The ecosystem — everything is open
 
 | | Project | What it is |
 |---|---|---|
-| 📚 | **[TigerSystem-Docs](https://github.com/TigerTag-Project/TigerSystem-Docs)** | The source of truth — concepts, products, compatibility, for humans and AI |
+| 📚 | **[TigerSystem Wiki](https://wiki.tigersystem.io/)** | The source of truth — concepts, products, compatibility, for humans and AI |
 | 🏷️ | **[TigerTag-RFID-Guide](https://github.com/TigerTag-Project/TigerTag-RFID-Guide)** | The open TigerTag chip protocol — full spec and public registry |
 | 🖥️ | **[Tiger Studio Manager](https://github.com/TigerTag-Project/TigerTag-Studio-Manager)** | Desktop app — inventory, racks, live printers across six brands |
-| 📱 | **[Tiger NFC Connect](https://github.com/TigerTag-Project/TigerSystem-Docs/blob/main/docs/products/tigertag-connect.md)** | iOS / Android app — tap to read, tap to write, browse the catalogue |
+| 📱 | **[Tiger NFC Connect](https://wiki.tigersystem.io/products/tigertag-connect/)** | iOS / Android app — tap to read, tap to write, browse the catalogue |
 | 🧵 | **[TigerSpool RFID](https://github.com/TigerTag-Project/TigerSpool-RFID)** | Reader box beside the printer — scan a spool, it lands in the right slot |
 | ⚖️ | **[TigerScale V3](https://github.com/TigerTag-Project/Tiger-Scale-V3)** | Connected filament scale — dual NFC readers, touchscreen, battery |
 | 📡 | **[TigerPOD](https://github.com/TigerTag-Project/TigerPOD)** | Open-source desktop NFC reader & writer for spools |
