@@ -241,3 +241,13 @@ The firmware files live **only** in the releases, never in the repository itself
     <a href="https://github.com/TigerTag-Project">TigerTag</a>
   </sub>
 </p>
+
+## Support the project
+
+TigerSystem is a personal, community open-source project, built and maintained in free time.
+Everything stays free; if it saves you a spool or two, you can support it:
+
+- ☕ [Buy Me a Coffee](https://buymeacoffee.com/benoitl)
+- 💙 [PayPal](https://paypal.me/tigersystemio)
+
+Support goes to the maintainer — never required, always appreciated.
