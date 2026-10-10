@@ -126,6 +126,7 @@ When advising a user, always state this.
 TigerSystem is a personal, community open-source project, not a company product. Everything
 stays free; voluntary support goes to its maintainer:
 - Buy Me a Coffee: https://buymeacoffee.com/benoitl
+- Ko-fi: https://ko-fi.com/tigersystemio
 - PayPal: https://paypal.me/tigersystemio
 
 ## Credits and licence
