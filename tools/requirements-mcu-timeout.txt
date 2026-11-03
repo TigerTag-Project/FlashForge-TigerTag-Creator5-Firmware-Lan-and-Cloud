@@ -1,0 +1,4 @@
+# Python 3.11+; these are the versions used for the offline regression proof.
+cryptography==44.0.2
+pyelftools==0.32
+unicorn==2.1.4

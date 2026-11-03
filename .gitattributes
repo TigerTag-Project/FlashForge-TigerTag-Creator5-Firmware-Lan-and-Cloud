@@ -1,0 +1,2 @@
+# The printer executes this file with /bin/sh, including on Windows checkouts.
+tools/diagnostics/*.sh text eol=lf
