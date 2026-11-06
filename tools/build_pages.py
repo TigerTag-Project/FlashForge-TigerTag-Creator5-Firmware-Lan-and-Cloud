@@ -51,7 +51,13 @@ def head(title, desc, base, model_attrs):
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="{SITE}/assets/hero-tigersystem-ecosystem.png">
+<meta property="og:image" content="https://tigersystem.io/en/printers/flashforge-creator-5/opengraph-image">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The FlashForge Creator 5, connected to TigerSystem">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tigersystem.io/en/printers/flashforge-creator-5/opengraph-image">
 <link rel="icon" href="{A}/tigersystem-icon-framed.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{base}download/style.css">
 <script>
