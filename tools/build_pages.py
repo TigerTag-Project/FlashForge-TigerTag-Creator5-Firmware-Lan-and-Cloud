@@ -39,7 +39,7 @@ IC = {
 }
 
 
-def head(title, desc, base, model_attrs):
+def head(title, desc, base, model_attrs, og_desc=None):
     """base: relative path from the page to the site root ('' or '../../')."""
     A = f'{base}assets'
     return f'''<!doctype html>
@@ -50,7 +50,7 @@ def head(title, desc, base, model_attrs):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
-<meta property="og:description" content="{desc}">
+<meta property="og:description" content="{og_desc or desc}">
 <meta property="og:image" content="https://tigersystem.io/en/printers/flashforge-creator-5/opengraph-image">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
@@ -250,7 +250,9 @@ def model_page(slug, prefix, name, img, oslug, oname):
   </div>
 </main>
 '''
-    return head(title, desc, base, attrs) + body + common(base)
+    # The share text stays under ~125 characters, what link previews show in full.
+    og = f'Official FlashForge × TigerSystem firmware for the {name}: FlashForge Cloud and LAN at the same time.'
+    return head(title, desc, base, attrs, og) + body + common(base)
 
 
 def home_page():
@@ -277,7 +279,8 @@ def home_page():
   </div>
 </main>
 '''
-    return head(title, desc, base, ' data-model=""') + body + common(base)
+    og = 'Official FlashForge firmware for the Creator 5 and 5 Pro: FlashForge Cloud and LAN at the same time.'
+    return head(title, desc, base, ' data-model=""', og) + body + common(base)
 
 
 def main():
