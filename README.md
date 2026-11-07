@@ -181,6 +181,13 @@ ecosystem on their stock firmware.
 
 ## Install
 
+> [!NOTE]
+> If the Pro model reports `MCU upgrade failed!` after installing version
+> `2.0.0-1.3.1-20260920`, see the
+> [MCU timeout investigation, patch builder, and installation guide](docs/creator5pro-mcu-timeout.md).
+> **This fix was tested and reported working on the Creator 5 Pro only. It is not
+> compatible with the Creator 5.**
+
 The **Download** buttons at the top of this page always fetch the newest file for your model. Every version is a
 **[GitHub Release](../../releases)**; the newest is always at
 **[releases/latest](../../releases/latest)**, with both files attached and their SHA-256 checksums.
